@@ -15,7 +15,6 @@ basic_auth = BasicAuth(app)
 
 @app.route('/')
 def home():
-  print(Blog.query.all()[0])
   return render_template('index.html', data = Blog.query.all())
 
 @app.route('/post/<id>')
